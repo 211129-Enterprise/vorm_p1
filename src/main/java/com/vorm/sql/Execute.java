@@ -10,7 +10,7 @@ public class Execute {
 	Tables tables = new Tables();
 	
 	public void execute(Configuration cfg ){
-		System.out.println("attempting to connect to db");
+//		System.out.println("attempting to connect to db");
 //		com.vorm.sql.ConnectionUtil.getConnection();
 		
 		

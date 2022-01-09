@@ -14,6 +14,12 @@ public class Student {
 	
 	@Column(columnName = "student_name")
 	private String name;
+	
+	@Column(columnName = "student_last_name")
+	private String lastName;
+	
+	@Column(columnName = "pin")
+	private int pin;
 
 	public Student() {
 		super();

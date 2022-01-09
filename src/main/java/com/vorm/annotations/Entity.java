@@ -19,6 +19,7 @@ public @interface Entity {
 
 	String tableName();
 	
+	
 }
 /*
 Retention policies

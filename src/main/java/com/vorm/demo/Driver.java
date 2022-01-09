@@ -41,6 +41,7 @@ public class Driver {
 		
 		
 		// iterate over each class that has been added to the configuration object and print info about it
+System.out.println("==============================================");
 		System.out.println("Driver  ....");
 		for (MetaModel<?> metamodel : cfg.getMetaModels()) {
 			

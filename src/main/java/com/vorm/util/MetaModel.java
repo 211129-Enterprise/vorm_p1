@@ -1,5 +1,6 @@
 package com.vorm.util;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.LinkedList;
 import java.util.List;
@@ -46,7 +47,7 @@ public class MetaModel<T> { // we're inferring that the MetaModel class can only
 	
 	// this method will return all the column fields of a metamodel class
 	public List<ColumnField> getColumns() {
-		// this method reutrns all the properties of the class that are marked with @Column annotation
+		// this method returns all the properties of the class that are marked with @Column annotation
 		
 		Field[] fields = clazz.getDeclaredFields();
 		
@@ -120,5 +121,13 @@ public class MetaModel<T> { // we're inferring that the MetaModel class can only
 		return clazz.getName();
 	}
 	
-
+//	public String getEntityColumnName () {
+//		Annotation [] ann =  clazz.getAnnotations();
+//		
+//		for (Annotation a : ann) {
+//			System.out.println(a);
+//		}
+//		
+//		return null;
+//	}
 }

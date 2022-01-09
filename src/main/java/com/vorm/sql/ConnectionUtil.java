@@ -37,7 +37,7 @@ public class ConnectionUtil {
 			prop.load(new FileReader("/Users/viralbhavsar/Documents/vorm_p1/src/main/resources/application.properties"));
 			conn = DriverManager.getConnection(prop.getProperty("awsurl"), prop.getProperty("awsuser"),
 					prop.getProperty("awspass"));
-			System.out.print("DB Connected\n");
+//			System.out.print("DB Connected\n");
 			return conn;
 		} catch (SQLException se) {
 			se.printStackTrace();
