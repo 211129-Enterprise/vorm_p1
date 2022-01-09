@@ -34,8 +34,7 @@ public class ConnectionUtil {
 
 		try {
 			Properties prop = new Properties();
-			prop.load(new FileReader(
-					"C:\\Users\\Viral\\OneDrive\\Desktop\\vorm_p1\\src\\main\\resources\\application.properties"));
+			prop.load(new FileReader("/Users/viralbhavsar/Documents/vorm_p1/src/main/resources/application.properties"));
 			conn = DriverManager.getConnection(prop.getProperty("awsurl"), prop.getProperty("awsuser"),
 					prop.getProperty("awspass"));
 			System.out.print("DB Connected\n");
