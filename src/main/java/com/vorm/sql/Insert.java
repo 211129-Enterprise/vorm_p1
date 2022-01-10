@@ -1,5 +1,8 @@
 package com.vorm.sql;
 
+import java.util.List;
+
+import com.vorm.util.ColumnField;
 import com.vorm.util.MetaModel;
 
 /**
@@ -9,13 +12,17 @@ import com.vorm.util.MetaModel;
  */
 public class Insert {
 	
-	int insert (MetaModel<?> metaModel) {
+	int insert (Class<?> clazz) {
 		
 		/**
 		 * INSERT INTO student (student_name, student_last_name, pin) VALUES ('viral', 'bhavsar', 123) RETURNING student_id;
 		 */
 		
-		String tableName = metaModel.getSimpleClassName().toLowerCase();
+		
+		List<ColumnField> columnFields;
+		
+		
+	
 		
 		System.out.println(tableName);
 		
