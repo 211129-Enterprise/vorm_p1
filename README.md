@@ -1,2 +1,7 @@
-# vorm_p1
-Custom ORM 
+VORM
+
+Simple ORM for complex tasks
+
+Steps to configure
+
+1. 
