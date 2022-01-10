@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
 
-import com.sun.xml.internal.stream.Entity;
+//import com.sun.xml.internal.stream.Entity;
 import com.vorm.annotations.Id;
 import com.vorm.util.ColumnField;
 import com.vorm.util.MetaModel;

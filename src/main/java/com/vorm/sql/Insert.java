@@ -24,7 +24,7 @@ public class Insert {
 		
 	
 		
-		System.out.println(tableName);
+//		System.out.println(tableName);
 		
 		return 0;
 	}
