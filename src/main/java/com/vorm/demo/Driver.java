@@ -2,8 +2,10 @@ package com.vorm.demo;
 
 import java.util.List;
 
+import com.vorm.model.Course;
 import com.vorm.model.Student;
 import com.vorm.sql.Execute;
+import com.vorm.sql.Insert;
 import com.vorm.util.ColumnField;
 import com.vorm.util.Configuration;
 import com.vorm.util.ForeignKeyField;
@@ -31,9 +33,16 @@ public class Driver {
 		Configuration cfg = new Configuration();
 		
 		cfg.addAnnotatedClass(Student.class);
+		cfg.addAnnotatedClass(Course.class);
 		
 		Execute runner = new Execute();
 		runner.execute(cfg);
+		
+		Student s1 = new Student("Komal", "Bhavsar", 234);
+		
+		Insert ins = new Insert();
+		
+		
 		
 		// Step 2 of operations with the Configuration Object is adding the DB creds and connecting
 //		cfg.getConnection("someUrl", "dbUsername", "dbPassword");

@@ -25,20 +25,60 @@ public class Student {
 		super();
 	}
 
-	public Student(String name) {
+	
+	
+	public Student(String name, String lastName, int pin) {
 		super();
 		this.name = name;
+		this.lastName = lastName;
+		this.pin = pin;
 	}
 
-	public Student(int id, String name) {
+
+
+	public Student(int id, String name, String lastName, int pin) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.lastName = lastName;
+		this.pin = pin;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public int getPin() {
+		return pin;
+	}
+
+	public void setPin(int pin) {
+		this.pin = pin;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name);
+		return Objects.hash(id, lastName, name, pin);
 	}
 
 	@Override
@@ -50,13 +90,16 @@ public class Student {
 		if (getClass() != obj.getClass())
 			return false;
 		Student other = (Student) obj;
-		return id == other.id && Objects.equals(name, other.name);
+		return id == other.id && Objects.equals(lastName, other.lastName) && Objects.equals(name, other.name)
+				&& pin == other.pin;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + "]";
+		return "Student [id=" + id + ", name=" + name + ", lastName=" + lastName + ", pin=" + pin + "]";
 	}
+
+
 	
 	
 }

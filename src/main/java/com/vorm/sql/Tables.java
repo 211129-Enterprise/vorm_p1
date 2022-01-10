@@ -7,6 +7,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
@@ -21,7 +22,8 @@ import com.vorm.util.MetaModel;
 public class Tables {
 
 	// grab a conection
-	Connection conn = ConnectionUtil.getConnection();
+//	Connection conn = ConnectionUtil.getConnection();
+	SqlUtil simpleSql = new SqlUtil();
 
 	// make a db call
 
@@ -54,7 +56,7 @@ public class Tables {
 			} else {
 				typ = "NUMERIC";
 			}
-			System.out.println("col " + col + " typ " + typ+ "\n");
+//			System.out.println("col " + col + " typ " + typ+ "\n");
 			
 			cNames.add(col);
 			cTypes.add(typ);
@@ -66,14 +68,14 @@ public class Tables {
 			columdatasql = columdatasql + cNames.get(i) + " " + cTypes.get(i) + ", "; 
 		}
 		
-		System.out.println(columdatasql.substring(0, columdatasql.length()-2));
+//		System.out.println(columdatasql.substring(0, columdatasql.length()-2));
 		
 		String sqlCol = columdatasql.substring(0, columdatasql.length()-2);
 		
 //		metaModel.getClass().getEntityColumnName();
 		
-		System.out.println("tableName \t" + tableName);
-		System.out.println("pkName \t\t" + pkName);
+//		System.out.println("tableName \t" + tableName);
+//		System.out.println("pkName \t\t" + pkName);
 		
 		String isCascade = "";
 		String dropT = "";
@@ -96,8 +98,11 @@ public class Tables {
 		
 		String createT = "CREATE TABLE " + tableName + " ( " +pkName + " SERIAL PRIMARY KEY " +(cNames.size() > 0 ? " ," : " ")  + sqlCol + " );";
 		
-		System.out.println(createT);
+//		System.out.println(createT);
 		
+		simpleSql.sendsql(createT);
+		
+	
 	}
 
 }
